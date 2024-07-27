@@ -1,0 +1,166 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// “ú–{Œê resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+MENU_MAIN MENU 
+BEGIN
+    POPUP "Menu"
+    BEGIN
+        MENUITEM "Volume",                      IDM_VOLUME
+        MENUITEM SEPARATOR
+        MENUITEM "Exit",                        IDM_CLOSE
+    END
+END
+
+IDR_MENU1 MENU 
+BEGIN
+    POPUP "dum"
+    BEGIN
+        POPUP "Screen"
+        BEGIN
+            MENUITEM "x1",                          1028
+            MENUITEM "x2",                          1029
+        END
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,4,3,2
+ PRODUCTVERSION 0,0,0,0
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104b0"
+        BEGIN
+            VALUE "FileVersion", "0, 4, 3, 2"
+            VALUE "LegalCopyright", "(C) Pixel 2010"
+            VALUE "ProductVersion", "0, 0, 0, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+0                       ICON                    "resource/icon/face.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+BMP_COLOR_BGFIELD       BITMAP                  "resource/bmp/color_bg_field.bmp"
+BMP_COLOR_BGTEXT        BITMAP                  "resource/bmp/color_bg_text.bmp"
+BMP_COLOR_TEXT          BITMAP                  "resource/bmp/color_text.bmp"
+BMP_FONT_1              BITMAP                  "resource/bmp/font1.bmp"
+BMP_FRAME_B             BITMAP                  "resource/bmp/frame_b.bmp"
+BMP_FRAME_H             BITMAP                  "resource/bmp/frame_h.bmp"
+BMP_FRAME_M             BITMAP                  "resource/bmp/frame_m.bmp"
+BMP_FRAME_V             BITMAP                  "resource/bmp/frame_v.bmp"
+BMP_KEYCODE             BITMAP                  "resource/bmp/keycode.bmp"
+BMP_TITLE               BITMAP                  "resource/bmp/title.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PTNOISE
+//
+
+PTN_CANCEL              PTNOISE                 "resource\\ptnoise\\cancel.ptnoise"
+PTN_ERROR               PTNOISE                 "resource\\ptnoise\\error.ptnoise"
+PTN_EQUIP               PTNOISE                 "resource\\ptnoise\\equip.ptnoise"
+PTN_GOAL                PTNOISE                 "resource\\ptnoise\\goal.ptnoise"
+PTN_INQUIRY             PTNOISE                 "resource\\ptnoise\\inquiry.ptnoise"
+PTN_OK                  PTNOISE                 "resource\\ptnoise\\ok.ptnoise"
+PTN_SCREAM1             PTNOISE                 "resource\\ptnoise\\scream1.ptnoise"
+PTN_SCREAM2             PTNOISE                 "resource\\ptnoise\\scream2.ptnoise"
+PTN_SELECT              PTNOISE                 "resource\\ptnoise\\select.ptnoise"
+PTN_WALK                PTNOISE                 "resource\\ptnoise\\walk.ptnoise"
+#endif    // “ú–{Œê resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

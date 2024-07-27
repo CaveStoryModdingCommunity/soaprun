@@ -1,0 +1,20 @@
+// 固定フラグ
+0000,none
+0001,everytime
+
+// 砂ビル 201
+0010,BldSnd-Rm201-DrCrd
+0011,Door2
+0012,BldSnd-Rm201-Bx1
+0013,BldSnd-Rm201-Bx2
+0014,Pench-Get
+0015,Door1-Opn
+0016,BldSnd-Rm202-DrCrd
+0017,BldSnd-Rm203-DrCrd
+0018,BldSnd-Rm202-Bx1
+0019,BldSnd-Rm202-Bx2
+0020,BldSnd-Rm201-Bx1-first
+
+// スクラップ
+0101 てつパイプ
+

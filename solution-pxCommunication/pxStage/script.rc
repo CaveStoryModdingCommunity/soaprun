@@ -1,0 +1,329 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// “ú–{Œê resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+MENU_MAIN MENU 
+BEGIN
+    POPUP "Stage"
+    BEGIN
+        MENUITEM "Load",                        IDM_STAGE_LOAD
+        MENUITEM "Save",                        IDM_STAGE_SAVE
+        MENUITEM SEPARATOR
+        MENUITEM "New",                         IDM_STAGE_NEW
+        MENUITEM SEPARATOR
+        MENUITEM "Close",                       IDM_CLOSE
+    END
+    POPUP "Mode"
+    BEGIN
+        MENUITEM "Map",                         IDM_MODE_MAP
+        MENUITEM "Field Unit",                  IDM_MODE_FIELDUNIT
+        MENUITEM "Field Door",                  IDM_MODE_FIELDDOOR, GRAYED
+        MENUITEM "Attribute1",                  IDM_MODE_ATT1
+        MENUITEM "Attribute2",                  IDM_MODE_ATT2, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Resident Image",              IDM_MODE_RESIDENT
+        MENUITEM SEPARATOR
+        MENUITEM "Room",                        IDM_ROOM
+    END
+    POPUP "Size"
+    BEGIN
+        MENUITEM "Map Size",                    IDM_MAPSIZE
+        MENUITEM "Attribute Size",              IDM_ATTRIBUTESIZE
+        MENUITEM "Sort Event UP",               IDM_SORTEVENT_UP
+    END
+    POPUP "etc"
+    BEGIN
+        MENUITEM "About",                       IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+0                       ICON                    "icon/face.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+BMP_SCROLL_H            BITMAP                  "bmp/ScrollH.bmp"
+BMP_SCROLL_V            BITMAP                  "bmp/ScrollV.bmp"
+BMP_TENKEY              BITMAP                  "bmp/tenkey.bmp"
+BMP_SYMBOL              BITMAP                  "bmp/Symbol.bmp"
+BMP_PALETTE             BITMAP                  "bmp/Palette.bmp"
+BMP_TOOLS               BITMAP                  "bmp/Tools.bmp"
+BMP_DUMMY               BITMAP                  "bmp/Dummy.bmp"
+BMP_ATTRIBUTE1          BITMAP                  "bmp/Attribute1.bmp"
+BMP_ATTRIBUTE2          BITMAP                  "bmp/Attribute2.bmp"
+BMP_UNITTYPE            BITMAP                  "bmp/UnitType.bmp"
+BMP_DOORTYPE            BITMAP                  "bmp/DoorType.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,0,0,0
+ PRODUCTVERSION 0,0,0,0
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104b0"
+        BEGIN
+            VALUE "CompanyName", "Studio Pixel"
+            VALUE "FileDescription", "pxtone project"
+            VALUE "FileVersion", "0, 0, 0, 0"
+            VALUE "LegalCopyright", "Copyright Studio-Pixel 2005"
+            VALUE "OriginalFilename", "pxStage"
+            VALUE "ProductName", "pxtone Voice"
+            VALUE "ProductVersion", "0, 0, 0, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+DLG_MAPSIZE DIALOGEX 0, 0, 63, 123
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Map Size"
+FONT 9, "‚l‚r ‚oƒSƒVƒbƒN", 400, 0, 0x80
+BEGIN
+    EDITTEXT        IDC_WIDTH,32,7,25,12,ES_RIGHT | ES_AUTOHSCROLL
+    EDITTEXT        IDC_HEIGHT,32,25,25,12,ES_RIGHT | ES_AUTOHSCROLL
+    CONTROL         "Right",IDC_CHECK_RIGHT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,19,49,31,10
+    CONTROL         "Bottom",IDC_CHECK_BOTTOM,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,19,63,37,10
+    DEFPUSHBUTTON   "Ok",IDOK,7,82,49,16,BS_FLAT
+    PUSHBUTTON      "Cancel",IDCANCEL,7,100,49,16,BS_FLAT
+    LTEXT           "Width",IDC_STATIC,7,7,21,12,SS_CENTERIMAGE
+    LTEXT           "Height",IDC_STATIC,7,25,21,12,SS_CENTERIMAGE
+END
+
+DLG_ABOUT DIALOGEX 0, 0, 118, 128
+STYLE DS_SETFONT | WS_POPUP | WS_BORDER | WS_SYSMENU
+FONT 9, "‚l‚r ‚oƒSƒVƒbƒN", 400, 0, 0x80
+BEGIN
+    DEFPUSHBUTTON   "Ok",IDOK,35,103,48,18,BS_FLAT
+    CTEXT           "---",IDC_VERSION,7,61,104,12,SS_CENTERIMAGE
+    CTEXT           "== About ==",IDC_TEXT_ABOUTTITLE,7,7,104,12,
+                    SS_CENTERIMAGE
+    CTEXT           "---",IDC_MESSAGE,7,81,104,12,SS_CENTERIMAGE
+    CTEXT           "pxMap",IDC_NAME,7,23,104,12,SS_CENTERIMAGE
+    CTEXT           "Studio Pixel",IDC_CREATOR,7,43,104,12,SS_CENTERIMAGE
+END
+
+DLG_FIELDUNIT DIALOGEX 0, 0, 138, 105
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Event[-]"
+FONT 9, "‚l‚r ‚oƒSƒVƒbƒN", 400, 0, 0x80
+BEGIN
+    COMBOBOX        IDC_COMBO_TYPE,42,12,78,153,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_PARAM2,42,54,25,12,ES_RIGHT | ES_AUTOHSCROLL
+    EDITTEXT        IDC_X,102,36,18,12,ES_RIGHT | ES_AUTOHSCROLL
+    EDITTEXT        IDC_Y,102,54,18,12,ES_RIGHT | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Ok",IDOK,18,84,48,12,BS_FLAT
+    PUSHBUTTON      "Cancel",IDCANCEL,73,84,48,12,BS_FLAT
+    LTEXT           "Unit Type",IDC_STATIC,7,13,29,12,SS_CENTERIMAGE
+    LTEXT           "X",IDC_STATIC,90,36,8,12,SS_CENTERIMAGE
+    LTEXT           "Y",IDC_STATIC,90,54,12,12,SS_CENTERIMAGE
+    LTEXT           "Param2",IDC_STATIC,6,54,30,12,SS_CENTERIMAGE
+END
+
+DLG_NEWSTAGE DIALOGEX 0, 0, 167, 69
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "New Stage"
+FONT 9, "MS UI Gothic", 400, 0, 0x80
+BEGIN
+    EDITTEXT        IDC_STAGE_NAME,54,18,102,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,54,42,48,18
+    PUSHBUTTON      "ƒLƒƒƒ“ƒZƒ‹",IDCANCEL,108,42,48,18
+    LTEXT           "Stage Name",IDC_STATIC,12,19,36,12,SS_CENTERIMAGE
+END
+
+DLG_LIST_STAGE DIALOGEX 0, 0, 59, 20
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Load Stage"
+FONT 9, "MS UI Gothic", 400, 0, 0x80
+BEGIN
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | 
+                    WS_BORDER | WS_TABSTOP,7,7,6,6
+END
+
+DLG_LIST_ROOM DIALOGEX 0, 0, 59, 20
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_THICKFRAME
+CAPTION "Room List"
+FONT 9, "MS UI Gothic", 400, 0, 0x80
+BEGIN
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | 
+                    WS_BORDER | WS_TABSTOP,7,7,6,6
+END
+
+DLG_ROOM DIALOGEX 0, 0, 175, 67
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Room"
+FONT 9, "MS UI Gothic", 400, 0, 0x80
+BEGIN
+    EDITTEXT        IDC_ROOM_NAME,60,18,102,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,60,42,48,18
+    PUSHBUTTON      "ƒLƒƒƒ“ƒZƒ‹",IDCANCEL,114,42,48,18
+    LTEXT           "Room Name",IDC_STATIC,12,18,36,12,SS_CENTERIMAGE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    "DLG_MAPSIZE", DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 56
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 116
+    END
+
+    "DLG_ABOUT", DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 111
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 121
+    END
+
+    "DLG_FIELDUNIT", DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 131
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 98
+    END
+
+    "DLG_NEWSTAGE", DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 160
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 62
+    END
+
+    "DLG_LIST_STAGE", DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 52
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 13
+    END
+
+    "DLG_LIST_ROOM", DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 52
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 13
+    END
+
+    "DLG_ROOM", DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 168
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 60
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // “ú–{Œê resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

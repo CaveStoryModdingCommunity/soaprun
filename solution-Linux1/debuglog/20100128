@@ -1,0 +1,212 @@
+001411,## start Linux1 v.0.0.0.2 (2010/01/27) ##
+001411,create thread: OK.
+001412,normal exit
+002404,## start Linux1 v.0.0.0.3 (2010/01/27) ##
+002404,create thread: OK.
+002406,normal exit
+004028,## start Linux1 v.0.0.0.3 (2010/01/27) ##
+004028,thrd attender: OK.
+004028,thrd listner: OK.
+004029,normal exit
+004955,## start Linux1 v.0.0.0.3 (2010/01/27) ##
+004955,thrd attender: OK.
+004955,thrd listner: OK.
+004955,bind and listen.
+004955,socket: ok.
+004955,bind: ok.
+004955,listen: ok.
+005034,accept: ok 0.0.0.0
+005048,signal exit [ INT by keybord ] main
+005048,signal exit [ INT by keybord ] sub
+005223,signal exit [ term ] main
+010732,## start Linux1 v.0.0.0.3 (2010/01/27) ##
+010732,thrd attender: OK.
+010752,signal exit [ INT by keybord ] main
+010752,signal exit [ INT by keybord ] sub
+011050,## start Linux1 v.0.0.0.3 (2010/01/27) ##
+011050,thrd listner: OK.
+011050,thrd attender: OK.
+011050,bind and listen.
+011050,socket: ok.
+011050,bind: ok.
+011050,listen: ok.
+011102,accept: ok 0.0.0.0
+011102,recv size: 3 byte
+011102,recv ok: 3 byte ok.
+011102,send size: 22 byte
+011102,send ok: 22 byte
+011145,accept: ok 192.168.0.155
+011145,recv size: 3 byte
+011145,recv ok: 3 byte ok.
+011145,send size: 22 byte
+011145,send ok: 22 byte
+011254,signal exit [ INT by keybord ] main
+011254,signal exit [ INT by keybord ] sub
+011307,## start Linux1 v.0.0.0.3 (2010/01/27) ##
+011307,thrd listner: OK.
+011307,bind and listen.
+011307,socket: ok.
+011307,bind: ok.
+011307,listen: ok.
+011307,thrd attender: OK.
+011314,accept: ok 0.0.0.0
+011314,recv size: 3 byte
+011314,recv ok: 3 byte ok.
+011314,send size: 22 byte
+011314,send ok: 22 byte
+011322,accept: ok 192.168.0.155
+011322,recv size: 3 byte
+011322,recv ok: 3 byte ok.
+011322,send size: 22 byte
+011322,send ok: 22 byte
+011653,signal exit [ INT by keybord ] main
+011653,signal exit [ INT by keybord ] sub
+011748,## start Linux1 v.0.0.0.3 (2010/01/27) ##
+011748,bind and listen.
+011748,socket: ok.
+011748,bind: ok.
+011748,thrd listner: OK.
+011748,thrd attender: OK.
+011748,listen: ok.
+011754,accept: ok 0.0.0.0
+011754,recv size: 3 byte
+011754,recv ok: 3 byte ok.
+011754,send size: 22 byte
+011754,send ok: 22 byte
+011802,signal exit [ INT by keybord ] main
+011802,signal exit [ INT by keybord ] sub
+011810,## start Linux1 v.0.0.0.3 (2010/01/27) ##
+011810,bind and listen.
+011810,socket: ok.
+011810,thrd listner: OK.
+011810,thrd attender: OK.
+011811,signal exit [ INT by keybord ] sub
+011811,signal exit [ INT by keybord ] main
+012014,## start Linux1 v.0.0.0.3 (2010/01/27) ##
+012014,thrd listner: OK.
+012014,thrd attender: OK.
+012014,bind and listen.
+012014,socket: ok.
+012014,bind: ok.
+012014,listen: ok.
+012021,accept: ok 0.0.0.0
+012021,recv size: 3 byte
+012021,recv ok: 3 byte ok.
+012021,send size: 22 byte
+012021,send ok: 22 byte
+012026,signal exit [ INT by keybord ] main
+012026,signal exit [ INT by keybord ] sub
+012159,## start Linux1 v.0.0.0.3 (2010/01/27) ##
+012159,thrd listner: OK.
+012159,bind and listen.
+012159,socket: ok.
+012159,bind: ok.
+012159,listen: ok.
+012159,thrd attender: OK.
+012206,accept: ok 0.0.0.0
+012206,recv size: 3 byte
+012206,recv ok: 3 byte ok.
+012206,send size: 22 byte
+012206,send ok: 22 byte
+012213,accept: ok 192.168.0.155
+012213,recv size: 3 byte
+012213,recv ok: 3 byte ok.
+012213,send size: 22 byte
+012213,send ok: 22 byte
+012220,accept: ok 192.168.0.155
+012220,recv size: 3 byte
+012220,recv ok: 3 byte ok.
+012220,send size: 22 byte
+012220,send ok: 22 byte
+012233,accept: ok 192.168.0.155
+012233,recv size: 3 byte
+012233,recv ok: 3 byte ok.
+012233,send size: 22 byte
+012233,send ok: 22 byte
+012251,signal exit [ INT by keybord ] main
+012251,signal exit [ INT by keybord ] sub
+012421,## start Linux1 v.0.0.0.3 (2010/01/27) ##
+012421,bind and listen.
+012421,socket: ok.
+012421,bind: ok.
+012421,listen: ok.
+012421,thrd listner: OK.
+012422,signal exit [ INT by keybord ] main
+012422,signal exit [ INT by keybord ] sub
+012423,## start Linux1 v.0.0.0.3 (2010/01/27) ##
+012423,bind and listen.
+012423,socket: ok.
+012423,thrd listner: OK.
+012423,bind: ok.
+012423,listen: ok.
+012424,signal exit [ INT by keybord ] main
+012424,signal exit [ INT by keybord ] sub
+012425,## start Linux1 v.0.0.0.3 (2010/01/27) ##
+012425,thrd listner: OK.
+012425,bind and listen.
+012425,socket: ok.
+012425,bind: ok.
+012425,listen: ok.
+012426,signal exit [ INT by keybord ] main
+012426,signal exit [ INT by keybord ] sub
+013039,## start Linux1 v.0.0.0.3 (2010/01/27) ##
+013040,bind and listen.
+013040,socket: ok.
+013040,bind: ok.
+013040,listen: ok.
+013040,thrd listner: OK.
+013045,accept: ok 0.0.0.0
+013055,recv size: 3 byte
+013055,recv ok: 3 byte ok.
+013055,send size: 22 byte
+013055,send ok: 22 byte
+013056,signal exit [ INT by keybord ] sub
+013056,signal exit [ INT by keybord ] main
+013152,## start Linux1 v.0.0.0.3 (2010/01/27) ##
+013152,thrd listner: OK.
+013152,bind and listen.
+013152,socket: ok.
+013152,normal exit
+013226,## start Linux1 v.0.0.0.3 (2010/01/27) ##
+013226,thrd listner: OK.
+013226,bind and listen.
+013226,socket: ok.
+013226,bind: ok.
+013226,listen: ok.
+013232,accept: ok 0.0.0.0
+013242,recv size: 3 byte
+013242,recv ok: 3 byte ok.
+013242,send size: 22 byte
+013242,send ok: 22 byte
+013251,signal exit [ INT by keybord ] main
+013251,signal exit [ INT by keybord ] sub
+013449,## start Linux1 v.0.0.0.3 (2010/01/27) ##
+013449,thrd listner: OK.
+013449,bind and listen.
+013449,socket: ok.
+013449,bind: ok.
+013449,listen: ok.
+013457,accept: ok 0.0.0.0
+013504,signal exit [ INT by keybord ] main
+013555,## start Linux1 v.0.0.0.3 (2010/01/27) ##
+013555,thrd listner: OK.
+013555,bind and listen.
+013555,socket: ok.
+013555,bind: ok.
+013555,listen: ok.
+013559,accept: ok 0.0.0.0
+013609,accept: ok 192.168.0.155
+013625,signal exit [ INT by keybord ] main
+014037,## start Linux1 v.0.0.0.3 (2010/01/27) ##
+014037,bind and listen.
+014037,socket: ok.
+014037,bind: ok.
+014037,listen: ok.
+014037,thrd listner: OK.
+014044,accept: ok 192.168.0.155
+014044,recv size: 3 byte
+014044,recv ok: 3 byte ok.
+014044,send size: 22 byte
+014044,send ok: 22 byte
+014049,signal exit [ INT by keybord ] main
+014049,signal exit [ INT by keybord ] sub
