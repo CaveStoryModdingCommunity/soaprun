@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{D1642C23-CBEC-42C8-861D-9565403CBE2B}</ProjectGuid>
+    <RootNamespace>pxStage</RootNamespace>
+    <Keyword>ManagedCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>false</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>false</CLRSupport>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>17.0.34511.75</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)$(Configuration)\$(TargetName)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)$(Configuration)\$(TargetName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(ProjectDir)\StdAfx;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AssemblyDebug>true</AssemblyDebug>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(ProjectDir)\StdAfx;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataTable\DataTable.vcxproj">
+      <Project>{d62f3999-d1b7-4eeb-96a7-e39c0b682199}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Dx\Dx.vcxproj">
+      <Project>{e93c8985-7b56-4176-973c-4c5219df2ad1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Fixture\Fixture.vcxproj">
+      <Project>{97363810-6de8-4e76-b07b-732e69e7d8bd}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bmp\Attribute.bmp" />
+    <None Include="bmp\Attribute1.bmp" />
+    <None Include="bmp\Attribute2.bmp" />
+    <None Include="bmp\DoorType.bmp" />
+    <None Include="bmp\Dummy.bmp" />
+    <None Include="bmp\Palette.bmp" />
+    <None Include="bmp\ScrollH.bmp" />
+    <None Include="bmp\ScrollV.bmp" />
+    <None Include="bmp\Symbol.bmp" />
+    <None Include="bmp\Tenkey.bmp" />
+    <None Include="bmp\Tools.bmp" />
+    <None Include="bmp\UnitType.bmp" />
+    <None Include="icon\face.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="script.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dialog\dlg_FieldUnit.cpp" />
+    <ClCompile Include="dialog\dlg_List_Stage.cpp" />
+    <ClCompile Include="dialog\dlg_MapSize.cpp" />
+    <ClCompile Include="dialog\dlg_NewStage.cpp" />
+    <ClCompile Include="EditMode.cpp" />
+    <ClCompile Include="interface\cls_Scroll.cpp" />
+    <ClCompile Include="interface\if_Cursor.cpp" />
+    <ClCompile Include="interface\if_Cursor_Attribute.cpp" />
+    <ClCompile Include="interface\if_Cursor_FieldUnit.cpp" />
+    <ClCompile Include="interface\if_Cursor_Map.cpp" />
+    <ClCompile Include="interface\if_Cursor_Palette.cpp" />
+    <ClCompile Include="interface\if_Cursor_Tools.cpp" />
+    <ClCompile Include="interface\if_Generic.cpp" />
+    <ClCompile Include="interface\if_Palette.cpp" />
+    <ClCompile Include="interface\if_ShortcutKey.cpp" />
+    <ClCompile Include="interface\if_Table_Attribute.cpp" />
+    <ClCompile Include="interface\if_Table_FldObj.cpp" />
+    <ClCompile Include="interface\if_Table_Map.cpp" />
+    <ClCompile Include="interface\if_Tools.cpp" />
+    <ClCompile Include="interface\Interface.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MainProc.cpp" />
+    <ClCompile Include="StageProject.cpp" />
+    <ClCompile Include="StdAfx\StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">StdAfx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dialog\dlg_List_Stage.h" />
+    <ClInclude Include="dialog\dlg_MapSize.h" />
+    <ClInclude Include="dialog\dlg_NewStage.h" />
+    <ClInclude Include="EditMode.h" />
+    <ClInclude Include="interface\cls_Scroll.h" />
+    <ClInclude Include="interface\if_Cursor.h" />
+    <ClInclude Include="interface\if_Generic.h" />
+    <ClInclude Include="interface\if_Palette.h" />
+    <ClInclude Include="interface\if_ShortcutKey.h" />
+    <ClInclude Include="interface\if_Table_Attribute.h" />
+    <ClInclude Include="interface\if_Table_FldObj.h" />
+    <ClInclude Include="interface\if_Table_Map.h" />
+    <ClInclude Include="interface\if_Tools.h" />
+    <ClInclude Include="interface\Interface.h" />
+    <ClInclude Include="interface\SurfaceNo.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="StageProject.h" />
+    <ClInclude Include="StdAfx\StdAfx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\DirectX5\ddraw.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

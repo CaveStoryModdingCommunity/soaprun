@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="resource">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+    <Filter Include="StdAfx">
+      <UniqueIdentifier>{6b8c383b-fd28-4d2a-b4c9-b21829c13905}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{9bb01961-9807-408e-a6f1-8f6ac51c1aca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\dialog">
+      <UniqueIdentifier>{8f939ace-8587-40c6-b35c-a58edb03cf13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\interface">
+      <UniqueIdentifier>{c0bc010b-8adb-4c76-a911-ffd9f2be750f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bmp\Attribute.bmp">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="bmp\Attribute1.bmp">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="bmp\Attribute2.bmp">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="bmp\DoorType.bmp">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="bmp\Dummy.bmp">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="icon\face.ico">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="bmp\Palette.bmp">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="bmp\ScrollH.bmp">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="bmp\ScrollV.bmp">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="bmp\Symbol.bmp">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="bmp\Tenkey.bmp">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="bmp\Tools.bmp">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="bmp\UnitType.bmp">
+      <Filter>resource</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="script.rc">
+      <Filter>resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="StdAfx\StdAfx.cpp">
+      <Filter>StdAfx</Filter>
+    </ClCompile>
+    <ClCompile Include="EditMode.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="MainProc.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="StageProject.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="dialog\dlg_FieldUnit.cpp">
+      <Filter>src\dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="dialog\dlg_List_Stage.cpp">
+      <Filter>src\dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="dialog\dlg_MapSize.cpp">
+      <Filter>src\dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="dialog\dlg_NewStage.cpp">
+      <Filter>src\dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="interface\cls_Scroll.cpp">
+      <Filter>src\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="interface\if_Cursor.cpp">
+      <Filter>src\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="interface\if_Cursor_Attribute.cpp">
+      <Filter>src\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="interface\if_Cursor_FieldUnit.cpp">
+      <Filter>src\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="interface\if_Cursor_Map.cpp">
+      <Filter>src\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="interface\if_Cursor_Palette.cpp">
+      <Filter>src\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="interface\if_Cursor_Tools.cpp">
+      <Filter>src\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="interface\if_Generic.cpp">
+      <Filter>src\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="interface\if_Palette.cpp">
+      <Filter>src\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="interface\if_ShortcutKey.cpp">
+      <Filter>src\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="interface\if_Table_Attribute.cpp">
+      <Filter>src\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="interface\if_Table_FldObj.cpp">
+      <Filter>src\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="interface\if_Table_Map.cpp">
+      <Filter>src\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="interface\if_Tools.cpp">
+      <Filter>src\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="interface\Interface.cpp">
+      <Filter>src\interface</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="StdAfx\StdAfx.h">
+      <Filter>StdAfx</Filter>
+    </ClInclude>
+    <ClInclude Include="EditMode.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="StageProject.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="dialog\dlg_List_Stage.h">
+      <Filter>src\dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="dialog\dlg_MapSize.h">
+      <Filter>src\dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="dialog\dlg_NewStage.h">
+      <Filter>src\dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\cls_Scroll.h">
+      <Filter>src\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\if_Cursor.h">
+      <Filter>src\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\if_Generic.h">
+      <Filter>src\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\if_Palette.h">
+      <Filter>src\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\if_ShortcutKey.h">
+      <Filter>src\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\if_Table_Attribute.h">
+      <Filter>src\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\if_Table_FldObj.h">
+      <Filter>src\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\if_Table_Map.h">
+      <Filter>src\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\if_Tools.h">
+      <Filter>src\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\Interface.h">
+      <Filter>src\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\SurfaceNo.h">
+      <Filter>src\interface</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\DirectX5\ddraw.lib" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="lib">
+      <UniqueIdentifier>{2461a153-3a91-4b03-b7cf-3de05514d90d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{a5f6c41c-b944-4891-9984-7f99ed5ef385}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StdAfx">
+      <UniqueIdentifier>{433023e5-deec-42f5-8624-be066da38ac9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utility_Draw">
+      <UniqueIdentifier>{1793ed4c-086d-41b5-af3c-830095676021}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utility_Input">
+      <UniqueIdentifier>{61db0335-8cb8-49c3-87f9-4a73c8b4f1a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utility_Sound">
+      <UniqueIdentifier>{8ddb5b28-8ec9-4ef2-9fe4-6c48c5a14c9a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\DirectX5\ddraw.lib">
+      <Filter>lib</Filter>
+    </Library>
+    <Library Include="..\DirectX5\dinput.lib">
+      <Filter>lib</Filter>
+    </Library>
+    <Library Include="..\DirectX5\dsound.lib">
+      <Filter>lib</Filter>
+    </Library>
+    <Library Include="..\DirectX5\dxguid.lib">
+      <Filter>lib</Filter>
+    </Library>
+    <Library Include="pxtone\pxtone.lib">
+      <Filter>lib</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resource\ptnoise\cancel.ptnoise">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="resource\bmp\color_bg_field.bmp">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="resource\bmp\color_bg_text.bmp">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="resource\bmp\color_text.bmp">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="resource\ptnoise\equip.ptnoise">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="resource\ptnoise\error.ptnoise">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="resource\icon\face.ico">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="resource\bmp\font1.bmp">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="resource\bmp\frame_b.bmp">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="resource\bmp\frame_h.bmp">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="resource\bmp\frame_m.bmp">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="resource\bmp\frame_v.bmp">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="resource\ptnoise\goal.ptnoise">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="resource\ptnoise\inquiry.ptnoise">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="resource\bmp\keycode.bmp">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="resource\ptnoise\ok.ptnoise">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="resource\ptnoise\scream1.ptnoise">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="resource\ptnoise\scream2.ptnoise">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="resource\ptnoise\select.ptnoise">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="resource\bmp\title.bmp">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="resource\ptnoise\walk.ptnoise">
+      <Filter>resource</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>resource</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx\StdAfx.h">
+      <Filter>StdAfx</Filter>
+    </ClInclude>
+    <ClInclude Include="utility_Draw\FontWork.h">
+      <Filter>utility_Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="utility_Draw\GenericFrame.h">
+      <Filter>utility_Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="utility_Draw\ListFrame.h">
+      <Filter>utility_Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="utility_Draw\MessageFrame.h">
+      <Filter>utility_Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="utility_Draw\Pane.h">
+      <Filter>utility_Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="utility_Draw\PxImage.h">
+      <Filter>utility_Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="utility_Draw\ScreenCurtain.h">
+      <Filter>utility_Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="utility_Draw\SecondCounter.h">
+      <Filter>utility_Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="utility_Draw\SimpleImage.h">
+      <Filter>utility_Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="utility_Draw\SimpleList.h">
+      <Filter>utility_Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="utility_Draw\Surface.h">
+      <Filter>utility_Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="utility_Input\Buttons.h">
+      <Filter>utility_Input</Filter>
+    </ClInclude>
+    <ClInclude Include="utility_Sound\BGM.h">
+      <Filter>utility_Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="utility_Sound\SEFF.h">
+      <Filter>utility_Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="Attender.h" />
+    <ClInclude Include="Caret.h" />
+    <ClInclude Include="ColorSelection.h" />
+    <ClInclude Include="DrawSelection.h" />
+    <ClInclude Include="FldUnit.h" />
+    <ClInclude Include="GameMain.h" />
+    <ClInclude Include="GameRecord.h" />
+    <ClInclude Include="Inquiry.h" />
+    <ClInclude Include="loop.h" />
+    <ClInclude Include="Map.h" />
+    <ClInclude Include="NPU_MapGrid.h" />
+    <ClInclude Include="Online.h" />
+    <ClInclude Include="PosHistory.h" />
+    <ClInclude Include="RequestResponse.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="scene_Buttons.h" />
+    <ClInclude Include="scene_Connection.h" />
+    <ClInclude Include="scene_Ending.h" />
+    <ClInclude Include="scene_Game.h" />
+    <ClInclude Include="scene_GameOver.h" />
+    <ClInclude Include="scene_Title.h" />
+    <ClInclude Include="SharedDefines.h" />
+    <ClInclude Include="TalkBoard.h" />
+    <ClInclude Include="Triangle.h" />
+    <ClInclude Include="Weather.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource.rc">
+      <Filter>resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="StdAfx\StdAfx.cpp">
+      <Filter>StdAfx</Filter>
+    </ClCompile>
+    <ClCompile Include="utility_Draw\FontWork.cpp">
+      <Filter>utility_Draw</Filter>
+    </ClCompile>
+    <ClCompile Include="utility_Draw\GenericFrame.cpp">
+      <Filter>utility_Draw</Filter>
+    </ClCompile>
+    <ClCompile Include="utility_Draw\ListFrame.cpp">
+      <Filter>utility_Draw</Filter>
+    </ClCompile>
+    <ClCompile Include="utility_Draw\MessageFrame.cpp">
+      <Filter>utility_Draw</Filter>
+    </ClCompile>
+    <ClCompile Include="utility_Draw\Pane.cpp">
+      <Filter>utility_Draw</Filter>
+    </ClCompile>
+    <ClCompile Include="utility_Draw\PxImage.cpp">
+      <Filter>utility_Draw</Filter>
+    </ClCompile>
+    <ClCompile Include="utility_Draw\ScreenCurtain.cpp">
+      <Filter>utility_Draw</Filter>
+    </ClCompile>
+    <ClCompile Include="utility_Draw\SecondCounter.cpp">
+      <Filter>utility_Draw</Filter>
+    </ClCompile>
+    <ClCompile Include="utility_Draw\SimpleImage.cpp">
+      <Filter>utility_Draw</Filter>
+    </ClCompile>
+    <ClCompile Include="utility_Draw\SimpleList.cpp">
+      <Filter>utility_Draw</Filter>
+    </ClCompile>
+    <ClCompile Include="utility_Draw\Surface.cpp">
+      <Filter>utility_Draw</Filter>
+    </ClCompile>
+    <ClCompile Include="utility_Input\Buttons.cpp">
+      <Filter>utility_Input</Filter>
+    </ClCompile>
+    <ClCompile Include="utility_Sound\BGM.cpp">
+      <Filter>utility_Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="utility_Sound\SEFF.cpp">
+      <Filter>utility_Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="Attender.cpp" />
+    <ClCompile Include="Caret.cpp" />
+    <ClCompile Include="ColorSelection.cpp" />
+    <ClCompile Include="DrawSelection.cpp" />
+    <ClCompile Include="FldUnit.cpp" />
+    <ClCompile Include="GameMain.cpp" />
+    <ClCompile Include="GameRecord.cpp" />
+    <ClCompile Include="Inquiry.cpp" />
+    <ClCompile Include="loop.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Map.cpp" />
+    <ClCompile Include="NPU_MapGrid.cpp" />
+    <ClCompile Include="Online.cpp" />
+    <ClCompile Include="PosHistory.cpp" />
+    <ClCompile Include="RequestResponse.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="scene_Buttons.cpp" />
+    <ClCompile Include="scene_Connection.cpp" />
+    <ClCompile Include="scene_Ending.cpp" />
+    <ClCompile Include="scene_Game.cpp" />
+    <ClCompile Include="scene_GameOver.cpp" />
+    <ClCompile Include="scene_Title.cpp" />
+    <ClCompile Include="SharedDefines.cpp" />
+    <ClCompile Include="TalkBoard.cpp" />
+    <ClCompile Include="Triangle.cpp" />
+    <ClCompile Include="Weather.cpp" />
+  </ItemGroup>
+</Project>

@@ -13,8 +13,8 @@ typedef struct {
 	LPDIRECTINPUTDEVICE2	pDevice;
 } DIRECTINPUTDEVICEINFO;
 
-static _neutral_x = 0;
-static _neutral_y = 0;
+static int _neutral_x = 0;
+static int _neutral_y = 0;
 
 
 // ジョイスティックの列挙

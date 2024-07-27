@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{4d4e4cae-631f-47db-ba06-93198b7dcbba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StdAfx">
+      <UniqueIdentifier>{1884b3f9-5055-4e18-8a27-14cf8c859a97}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AppDirectory.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="AppExisting.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="CriticalSection.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="DataDevice.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugLog.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="EditBox.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="FilePath.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="FileWork.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyControl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="MessageBox.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="Random.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="RingBuffer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="ShiftJIS.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="StringBuffer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="URL.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowFlash.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowRect.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx\StdAfx.cpp">
+      <Filter>StdAfx</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AppDirectory.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="AppExisting.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="CriticalSection.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="DataDevice.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugLog.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="EditBox.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="FilePath.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="FileWork.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyControl.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="MessageBox.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="Random.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="RingBuffer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="ShiftJIS.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="StringBuffer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="URL.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowFlash.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowRect.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx\StdAfx.h">
+      <Filter>StdAfx</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

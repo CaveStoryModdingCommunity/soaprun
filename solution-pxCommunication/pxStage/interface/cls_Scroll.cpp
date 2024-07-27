@@ -208,7 +208,7 @@ BOOL cls_SCROLL::Action( const RECT *p_field_rect, const POINT* p_cur )
 	long knob_width;
 	long knob_offset;
 
-	static _counter;
+	static int _counter;
 
 	// 水平スクロールバー
 	if( !_bVertical )

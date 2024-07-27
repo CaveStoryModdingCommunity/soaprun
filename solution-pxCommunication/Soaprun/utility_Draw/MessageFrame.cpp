@@ -267,7 +267,8 @@ void MessageFrame::Procedure( void )
 		scroll_y -= DIALOGUE_SCROLL_SPEED;
 		if( scroll_y > -DIALOGUE_NEXTLINEOFFSET ) break;
 
-		for( long l = 0; l < line_num - 1; l++ ) lines[ l ].CopyCellsBy( lines[ l + 1 ] );
+		long l;
+		for( l = 0; l < line_num - 1; l++ ) lines[ l ].CopyCellsBy( lines[ l + 1 ] );
 		lines[ line_num - 1 ].Clear();
 		scan_line   = l;
 		scroll_y    = 0;

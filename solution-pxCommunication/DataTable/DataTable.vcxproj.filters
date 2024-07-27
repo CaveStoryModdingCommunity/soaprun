@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="StdAfx">
+      <UniqueIdentifier>{48618b9f-16c6-4f79-b72f-bb4adefe7163}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StdAfx\リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dt_FldObj.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="dt_MapData.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="dt_Stage.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="dt_Stage_Attribute.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="dt_Stage_Map.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="dt_Stage_Unit.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx\StdAfx.cpp">
+      <Filter>StdAfx</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dt_FldObj.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="dt_MapData.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="dt_Stage.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx\StdAfx.h">
+      <Filter>StdAfx</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

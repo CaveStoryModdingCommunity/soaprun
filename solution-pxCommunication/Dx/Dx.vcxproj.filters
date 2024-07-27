@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="StdAfx">
+      <UniqueIdentifier>{db5a4c52-c0d8-4e10-a9aa-9acf047bcc16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{596a0d9d-6ede-49b1-b750-402b1dd1449c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="StdAfx\StdAfx.cpp">
+      <Filter>StdAfx</Filter>
+    </ClCompile>
+    <ClCompile Include="DxDraw.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="DxInput.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="DxSound.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="StdAfx\StdAfx.h">
+      <Filter>StdAfx</Filter>
+    </ClInclude>
+    <ClInclude Include="DxDraw.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="DxInput.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="DxSound.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

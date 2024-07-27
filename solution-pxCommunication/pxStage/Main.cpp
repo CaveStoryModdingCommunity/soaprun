@@ -44,10 +44,10 @@ BOOL    Function_IDM_PCM_EDIT   ( HWND hWnd );
 
 
 //////////////////////////////////////////
-// ƒ[ƒJƒ‹ŠÖ” //////////////////////////
+// ãƒ­ãƒ¼ã‚«ãƒ«é–¢æ•° //////////////////////////
 //////////////////////////////////////////
 
-// ƒEƒCƒ“ƒhƒEƒNƒ‰ƒX‚Ì“o˜^
+// ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ã‚¯ãƒ©ã‚¹ã®ç™»éŒ²
 static BOOL _RegistWindowClass( HINSTANCE hInst, char *class_name, WNDPROC lpfnWndProc )
 {
 
@@ -59,7 +59,7 @@ static BOOL _RegistWindowClass( HINSTANCE hInst, char *class_name, WNDPROC lpfnW
     wc.lpszClassName = class_name;
 	wc.style         = CS_HREDRAW | CS_VREDRAW;
     wc.lpfnWndProc   = lpfnWndProc;
-    wc.hInstance     = hInst;        //ƒCƒ“ƒXƒ^ƒ“ƒX
+    wc.hInstance     = hInst;        //ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹
     wc.hbrBackground = (HBRUSH)GetStockObject(NULL_BRUSH);//(HBRUSH)(COLOR_APPWORKSPACE + 1);
     wc.hIcon         = LoadIcon( hInst, "0" );
     wc.hCursor       = LoadCursor( NULL, IDC_ARROW       );
@@ -69,7 +69,7 @@ static BOOL _RegistWindowClass( HINSTANCE hInst, char *class_name, WNDPROC lpfnW
 	return TRUE;
 }
 
-// ƒtƒ@ƒCƒ‹ƒhƒƒbƒv(ƒAƒCƒRƒ“)
+// ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‰ãƒ­ãƒƒãƒ—(ã‚¢ã‚¤ã‚³ãƒ³)
 static BOOL _Function_DropProjectFile( HWND hWnd, char *lpszArgs )
 {
 	char path[MAX_PATH];
@@ -113,11 +113,11 @@ int WINAPI WinMain( HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR lpszArgs, int nW
 	if( !existing_window.Check( mutex_name, mapping_name ) ) return 0;
 */
 
-	// ƒRƒ‚ƒ“ƒRƒ“ƒgƒ[ƒ‹‚Ìdll‚ğ‰Šú‰»
+	// ã‚³ãƒ¢ãƒ³ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«ã®dllã‚’åˆæœŸåŒ–
 	InitCommonControls();
 	KeyControl_Clear();
 
-	// ”Ä—p‚ÌƒpƒX‚ğæ“¾-------------------------------------
+	// æ±ç”¨ã®ãƒ‘ã‚¹ã‚’å–å¾—-------------------------------------
 	GetModuleFileName(      NULL, g_module_path, MAX_PATH );
 	PathRemoveFileSpec(           g_module_path );
 	sprintf(                      g_dir_profile, "%s\\profile_pxstage", g_module_path );
@@ -129,19 +129,19 @@ int WINAPI WinMain( HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR lpszArgs, int nW
 
 	strcpy( g_app_name, "pxStage"  );
 
-	// ƒEƒCƒ“ƒhƒEƒNƒ‰ƒX‚ğ’è‹`
+	// ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ã‚¯ãƒ©ã‚¹ã‚’å®šç¾©
 	if( !_RegistWindowClass( hInst, _class_name, WindowProc_Main ) ) return FALSE;
 
     g_hMenu_Main   = LoadMenu( hInst, "MENU_MAIN" );
 
-	//L‚³‚ğw’è
+	//åºƒã•ã‚’æŒ‡å®š
 	g_MinimizeWidth  = VIEWDEFAULT_W + GetSystemMetrics(SM_CXFRAME)*2;
 	g_MinimizeHeight = VIEWDEFAULT_H +
 						GetSystemMetrics(SM_CYFRAME)*2 +
 						GetSystemMetrics(SM_CYCAPTION) +
 						GetSystemMetrics(SM_CYMENU) ;
 
-	// ƒEƒCƒ“ƒhƒE‚ğ¶¬
+	// ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ã‚’ç”Ÿæˆ
 	g_hWnd_Main = CreateWindow(
 		_class_name  ,
 		g_app_name   ,
@@ -156,7 +156,7 @@ int WINAPI WinMain( HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR lpszArgs, int nW
 /*
 	if( !existing_window.Mapping( mutex_name, mapping_name, g_hWnd_Main ) ) return 0;
 */
-	// ƒEƒCƒ“ƒhƒEˆÊ’u‚Ì“Ç‚İ‚İ
+	// ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ä½ç½®ã®èª­ã¿è¾¼ã¿
 	if( !WindowRect_Load( g_hWnd_Main, g_main_rect_name, TRUE ) ) WindowRect_Centering( g_hWnd_Main );
 
 	if( !DxDraw_Initialize( g_hWnd_Main, NULL, FALSE, FALSE ) ){ mbox_ERR( g_hWnd_Main, "dxdraw" ); return 0; }
@@ -165,8 +165,10 @@ int WINAPI WinMain( HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR lpszArgs, int nW
 		mbox_ERR( g_hWnd_Main, "main surface" ); return 0;
 	}
 
-	DxDraw_SetViewOffset( GetSystemMetrics( SM_CXFRAME   ),
+	DxDraw_SetViewOffset( GetSystemMetrics( SM_CXFRAME   ) + 
+						  GetSystemMetrics( SM_CXPADDEDBORDER ),
 						  GetSystemMetrics( SM_CYFRAME   ) +
+						  GetSystemMetrics( SM_CXPADDEDBORDER ) +
 						  GetSystemMetrics( SM_CYCAPTION ) +
 						  GetSystemMetrics( SM_CYMENU    ) );
 	DxDraw_Text_Ready( NULL, 6, 12 );
@@ -196,13 +198,13 @@ int WINAPI WinMain( HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR lpszArgs, int nW
 //	g_hList_Room = CreateDialog( g_hInst, "DLG_LIST_ROOM", g_hWnd_Main, dlg_List_Room );
 
 	MSG msg;
-	//ƒƒbƒZ[ƒWƒ‹[ƒv‚ğ¶¬
+	//ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãƒ«ãƒ¼ãƒ—ã‚’ç”Ÿæˆ
 	while( GetMessage( &msg, NULL, 0, 0 ) )
 	{
 //		if( !IsDialogMessage( g_hList_Room, &msg ) )
 //		{
-			TranslateMessage( &msg );//ƒL[ƒ{[ƒhg—p‰Â”\
-			DispatchMessage(  &msg );//§Œä‚ğWindows‚É–ß‚·
+			TranslateMessage( &msg );//ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ä½¿ç”¨å¯èƒ½
+			DispatchMessage(  &msg );//åˆ¶å¾¡ã‚’Windowsã«æˆ»ã™
 //		}
 	}
 
@@ -217,7 +219,7 @@ int WINAPI WinMain( HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR lpszArgs, int nW
 }
 
 //////////////////////////////////////////
-// ƒOƒ[ƒoƒ‹ŠÖ” ////////////////////////
+// ã‚°ãƒ­ãƒ¼ãƒãƒ«é–¢æ•° ////////////////////////
 //////////////////////////////////////////
 /*
 long MainWindow_GetFPS( void )

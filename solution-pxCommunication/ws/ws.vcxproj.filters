@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="StdAfx">
+      <UniqueIdentifier>{37613a5c-4a44-4d70-9718-1b6631e6a76e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{cf247cc3-1cd0-47fb-8be5-e2209166b6fd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="StdAfx\StdAfx.cpp">
+      <Filter>StdAfx</Filter>
+    </ClCompile>
+    <ClCompile Include="ws.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="wsClient.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="wsServer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="StdAfx\StdAfx.h">
+      <Filter>StdAfx</Filter>
+    </ClInclude>
+    <ClInclude Include="ws.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="wsClient.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="wsServer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -616,7 +616,7 @@ static void _Response()
 	}
 }
 
-static _IsActionEnable()
+static bool _IsActionEnable()
 {
 	if( _phase != _GAMEPHASE_Loading         &&
 		_phase != _GAMEPHASE_CheckLocation   &&
@@ -648,7 +648,7 @@ static void _Action( const BUTTONSSTRUCT* p_btns )
 		char str[ 20 ];
 
 		sprintf( str, "wait field %d\n", _b_wait_field_response );
-		OutputDebugStr( str );
+		OutputDebugString( str );
 
 		if( !_map->Location_Check( 0, 0 ) || _b_wait_field_response ) break;
 
