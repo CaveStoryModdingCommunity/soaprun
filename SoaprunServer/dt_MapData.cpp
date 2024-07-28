@@ -47,7 +47,7 @@ void dt_MapData::_mtx_unlock(){     pthread_mutex_unlock( &_mtx ); }
 
 
 /////////////////
-// グローバル
+// 繧ｰ繝ｭ繝ｼ繝舌Ν
 /////////////////
 
 dt_MapData::dt_MapData( int max_w, int max_l )
@@ -174,7 +174,7 @@ bool dt_MapData::SetSize( int w, int l, int align_flags )
 //	if( align_flags & MAPALIGNFLAG_RIGHT  ) offset_x = w - _w;
 //	if( align_flags & MAPALIGNFLAG_BOTTOM ) offset_y = l - _l;
 
-	// フレーム外を掃除
+	// 繝輔Ξ繝ｼ繝螟悶ｒ謗�髯､
 	for( int y = 0; y < _max_l; y++ )
 	{
 		for( int x = 0; x < _max_w; x++ )

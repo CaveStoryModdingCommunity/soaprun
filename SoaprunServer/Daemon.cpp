@@ -16,11 +16,11 @@ bool Daemon_Set( void )
 	switch( fork() )
 	{
 		case -1: perror( "fork" ); return false;
-		case  0: setsid(); break;  // qƒvƒƒZƒX‚Íƒ^[ƒ~ƒiƒ‹‚©‚çØ‚è—£‚·
-		default: exit(0);          // eƒvƒƒZƒX‚ÍI—¹‚³‚¹‚é
+		case  0: setsid(); break;  // å­ãƒ—ãƒ­ã‚»ã‚¹ã¯ã‚¿ãƒ¼ãƒŸãƒŠãƒ«ã‹ã‚‰åˆ‡ã‚Šé›¢ã™
+		default: exit(0);          // è¦ªãƒ—ãƒ­ã‚»ã‚¹ã¯çµ‚äº†ã•ã›ã‚‹
 	}
 
-	// •W€(ƒGƒ‰[)“üo—Í‚ğ•Â‚¶‚ÄA/dev/null‚Å–„‚ß‚Ä‚¨‚­
+	// æ¨™æº–(ã‚¨ãƒ©ãƒ¼)å…¥å‡ºåŠ›ã‚’é–‰ã˜ã¦ã€/dev/nullã§åŸ‹ã‚ã¦ãŠã
 	close( 0 ); // STDIN_FILENO ?
 	close( 1 ); // STDOUT_FILENO?
 	close( 2 ); // STDERR_FILENO?
@@ -29,10 +29,10 @@ bool Daemon_Set( void )
 	dup2( 0, 1 ); // STDOUT_FILENO?
 	dup2( 0, 2 ); // STDERR_FILENO?
 
-	// •s—v‚ÈƒVƒOƒiƒ‹‚ğ–³Œø‚É‚·‚é
-	signal( SIGCHLD, SIG_IGN ); //ƒ]ƒ“ƒr~‚ß
+	// ä¸è¦ãªã‚·ã‚°ãƒŠãƒ«ã‚’ç„¡åŠ¹ã«ã™ã‚‹
+	signal( SIGCHLD, SIG_IGN ); //ã‚¾ãƒ³ãƒ“æ­¢ã‚
 
-	umask( 0 ); // e‚ÌMASK‚ğˆø‚«Œp‚ª‚È‚¢
+	umask( 0 ); // è¦ªã®MASKã‚’å¼•ãç¶™ãŒãªã„
 
 	return true;
 }

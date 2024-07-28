@@ -86,7 +86,7 @@ int svPosHistory::Get( POSSHORT *list, unsigned int update_id )
 			num++;
 		}
 	}
-	// •K‚¸‚P‚Â‚Í‘—‚éB
+	// å¿…ãšï¼‘ã¤ã¯é€ã‚‹ã€‚
 	list[ num ].x = _list[ _num - 1 ].x;
 	list[ num ].y = _list[ _num - 1 ].y;
 	num++;
@@ -103,7 +103,7 @@ int svPosHistory::Num( unsigned int update_id )
 	{
 		if( _list[ h ].update_id > update_id ) num++;
 	}
-	// •K‚¸‚P‚Â‚Í‘—‚éB
+	// å¿…ãšï¼‘ã¤ã¯é€ã‚‹ã€‚
 	num++;
 	return num;
 }

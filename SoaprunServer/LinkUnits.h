@@ -47,4 +47,4 @@ public:
 	void ShutdownAndClose  ( int index, const LINKUNIT *p_link );
 };
 
-// LinkUnits ���쐬�B�f�X�g���N�^��lock���g���̂͂��ꂪ���߂āc
+// LinkUnits を作成。デストラクタでlockを使うのはこれが初めて…

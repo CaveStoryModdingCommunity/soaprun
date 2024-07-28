@@ -1,197 +1,197 @@
 100109
-	�ǉ� main.cpp DebugLog.cpp/h Daemon.cpp/h Signal.cpp/h Directory.cpp/h
-	�X���b�h���������Ă݂�B
+	追加 main.cpp DebugLog.cpp/h Daemon.cpp/h Signal.cpp/h Directory.cpp/h
+	スレッドを実装してみる。
 
 100110
-	test_Thread.cpp / test_Server.cpp ���쐬�B
-	wsClient�v���O��������T�[�o�ւ̐ڑ������I
+	test_Thread.cpp / test_Server.cpp を作成。
+	wsClientプログラムからサーバへの接続成功！
 
 100126
-	send/recv ���Ă݂�B
-	lnxServer�N���X�ƁAlnxSock_Send/Recv( b_sizehead ) �����B
-	send/recv �ɑ΂��� select() �͂܂��������Ă��Ȃ��B
+	send/recv してみる。
+	lnxServerクラスと、lnxSock_Send/Recv( b_sizehead ) を作る。
+	send/recv に対する select() はまだ実装していない。
 
 100127
-	Loop_Main.cpp �����B
-	svAttender�N���X�����B
-	svListener�N���X�����B
-	lnxSock_Send/Recv �� lnxSock.cpp/h �ֈڂ��B
-	����ł��� test_Thread.cpp / test_Server.cpp �͗v��Ȃ��Ȃ������ȁc
+	Loop_Main.cpp を作る。
+	svAttenderクラスを作る。
+	svListenerクラスを作る。
+	lnxSock_Send/Recv を lnxSock.cpp/h へ移す。
+	これでもう test_Thread.cpp / test_Server.cpp は要らなくなったかな…
 
 100128
-	SoaprunServer�Ƃ��ăv���W�F�N�g����蒼���B
-	Signal.cpp/h ����蒼���Bsignal_handler��������sigwait�X���b�h�����֕ύX�B
-	Ctrl+C�Ő���ɏI���ł���悤�ɂȂ����B
-	accept�����\�P�b�g���i�[���邽�߂�lstSocket�N���X���쐬�B
-	Main_Loop() �𖳂����B
+	SoaprunServerとしてプロジェクトを作り直す。
+	Signal.cpp/h を作り直す。signal_handler方式からsigwaitスレッド方式へ変更。
+	Ctrl+Cで正常に終了できるようになった。
+	acceptしたソケットを格納するためのlstSocketクラスを作成。
+	Main_Loop() を無くす。
 
 100129
-	�N���C�A���g�Ƃ̃v���g�R���`�F�b�N���ł����B
-	dt_MapData.cpp/h ���ڐA���āA�s�v�ȕ��������B
-	data�t�H���_�����A�}�b�v�p�[�c�A�g���r���[�g�����[�h�B
+	クライアントとのプロトコルチェックができた。
+	dt_MapData.cpp/h を移植して、不要な部分を削る。
+	dataフォルダを作り、マップパーツアトリビュートをロード。
 
 100131
-	lnxScok_Send/Recv() �� select�Ή��B
-	mAtt���N���C�A���g�ɓn����悤�ɂȂ����B
+	lnxScok_Send/Recv() を select対応。
+	mAttをクライアントに渡せるようになった。
 
 100201
-	svAttender::SendRoom() ���쐬�B
-	�����Ă邯�� Room�f�[�^�𑗐M�ł���悤�ɂȂ����B
+	svAttender::SendRoom() を作成。
+	化けてるけど Roomデータを送信できるようになった。
 
 100202
-	�\�P�b�g�����o�^�ł��Ȃ� lstSocket�N���X ����߂�
-	IP�A�h���X�Ȃǂ�������āA����O������ł��� LinkUnits�N���X �����B
-	������ Room�f�[�^�𑗐M�ł���悤�ɂȂ����B
-	�N���C�A���g���ڑ������ƏI���ł��Ȃ����������C���B
+	ソケットしか登録できない lstSocketクラス をやめて
+	IPアドレスなども入れられて、定員外も判定できる LinkUnitsクラス を作る。
+	正しい Roomデータを送信できるようになった。
+	クライアントが接続中だと終了できなかった問題を修正。
 
 100206
-	Makefile.PHONY: �ɁA�|�[�g1002 ���g�� run2 ��ǉ��B
-	clREQUEST_Test / clREQUEST_Dlog ��ǉ��B
-	svAttender::SendQuota() ��ǉ��B����ȓ����ǂ������A"WLCM"���A"OVER"�ő���B
-	24:00 �ɏ����J�I
+	Makefile.PHONY: に、ポート1002 を使う run2 を追加。
+	clREQUEST_Test / clREQUEST_Dlog を追加。
+	svAttender::SendQuota() を追加。定員以内かどうかを、"WLCM"か、"OVER"で送る。
+	24:00 に初公開！
 	---- v.0.1.0.0 Protocol v10 MaxSock=128 EnableSock=100
 
 100212
-	socket �� close() �O�� shutdown() ��t����B(attender / listener)
-	���T�[�o�[���Ƀ��Z�b�g�����ꍇ�ɁA�Đڑ��ł��Ȃ��Ȃ�̂������B
-	�N���C�A���g�v���O�����Ƌ��ʂ� prtc/test/mattr/room/dlog/room �� req/res �\���̂�ǉ��B
-	���N�G�X�g���X�|���X�ł������g���悤�ɂ���B
-	svFieldUnits�N���X��ǉ��B
+	socket の close() 前に shutdown() を付ける。(attender / listener)
+	→サーバーを先にリセットした場合に、再接続できなくなるのを解消。
+	クライアントプログラムと共通の prtc/test/mattr/room/dlog/room の req/res 構造体を追加。
+	リクエストレスポンスでそれらを使うようにする。
+	svFieldUnitsクラスを追加。
 	---- v.0.1.9.0 Protocol v20 MaxAttender= 96 MaxPlayer=64
 
 100218
-	RecvRequiest() -> RecvRequiestAndSendResponse() �֐����̂ݕύX�B
-	�������e�͑O�o�[�W�����ŕύX�ς݁B
+	RecvRequiest() -> RecvRequiestAndSendResponse() 関数名のみ変更。
+	処理内容は前バージョンで変更済み。
 
-	svAttender �� LinkUnit �����P�B
-	_no �� _index �ɕύX�B
-	_index �� LinukUnits �� svFieldUnits �ɑΉ�����B
-	�擪�̕��ق� svAttender ���ғ�����悤�ɂȂ邪�A�Ȃɂ��f�����b�g�͖����Ǝv����B
-	���O���ǐՂ��₷���Ȃ�B
-	LINKUNIT�\���̂̓R�s�[�ł͂Ȃ��Aconst�|�C���^�����������B
-	b_over_quota �� svAttender �������B
-	LINKUNIT�\���̂� b_linked / b_over_quota �͗v��Ȃ��Ȃ�B
+	svAttender と LinkUnit を改善。
+	_no を _index に変更。
+	_index は LinukUnits や svFieldUnits に対応する。
+	先頭の方ほど svAttender が稼動するようになるが、なにもデメリットは無いと思われる。
+	ログも追跡しやすくなる。
+	LINKUNIT構造体はコピーではなく、constポインタだけを扱う。
+	b_over_quota は svAttender が所持。
+	LINKUNIT構造体の b_linked / b_over_quota は要らなくなる。
 	
 100219
-	FieldUnit�ϐ��̌^�𐮗��B��� short -> char�B
-	�ł�ROOM�O�ւ̈ړ��ł��g�� map_x/y �͂���ς�short�^�c
-	������fldUnit �ɂ� lct_x/y ���s�v�ɂȂ�B
-	svPosHistory�N���X��ǉ��B
-	svFieldUnit �� FIELDUNIT�\���̂� svFldUnit�N���X�ɕύX�B
+	FieldUnit変数の型を整理。主に short -> char。
+	でもROOM外への移動でも使う map_x/y はやっぱりshort型…
+	そしてfldUnit には lct_x/y が不要になる。
+	svPosHistoryクラスを追加。
+	svFieldUnit の FIELDUNIT構造体を svFldUnitクラスに変更。
 
 100220
 	---- v.0.2.0.0 Protocol v30 MaxAttender= 96 MaxPlayer=64
 
 100224
-	svFldUnits�N���X�� _units �� _players �ɂ��āA_objects ���ǉ��B
-	�N���C�A���g�\�[�X����dt_FldObje���R�s�[�B�����B
-	�T�[�o�[���E�Ƀt�B�[���h�I�u�W�F�N�g�����[�h�B
+	svFldUnitsクラスの _units を _players にして、_objects も追加。
+	クライアントソースからdt_FldObjeをコピー。調整。
+	サーバー世界にフィールドオブジェクトをロード。
 
 100225
 	object -> npu (No Play Unit) .
-	svFldUnit�N���X�� svFieldUnits.cpp/h ������o���B
-	svFldUnit::NPU_SetReference() ��ǉ��B
+	svFldUnitクラスを svFieldUnits.cpp/h から取り出す。
+	svFldUnit::NPU_SetReference() を追加。
 
 100226
-	NPU_Closer ���v���C���[��ǂ�������悤�ɂȂ����I
-	NPU_MapGrid�N���X��ǉ��BNPU���ǂ����蔲������A����NPU�Əd�Ȃ����肵�Ȃ��Ȃ����I
-	dt_MapData�N���X��mutex����(�r������)������B
-	nPrtsHistory�N���X��ǉ��BsvFldUnit�Ɏ������āA�����̃��N�G�X�g�������Ƃ���Pop����B
+	NPU_Closer がプレイヤーを追いかけるようになった！
+	NPU_MapGridクラスを追加。NPUが壁をすり抜けたり、他のNPUと重なったりしなくなった！
+	dt_MapDataクラスにmutex処理(排他制御)を入れる。
+	nPrtsHistoryクラスを追加。svFldUnitに持たせて、自分のリクエストが来たときにPopする。
 
-	recv �ɂP���̃^�C���A�E�g��t���Ă݂�B
+	recv に１分のタイムアウトを付けてみる。
 	---- v.0.2.9.0 socket 96 enable 64 v0040 
 	
-	5�l���炢����� a[]get units: buffer full! ��p���B
-	BUFFERSIZE_ATTENDER �� 1024 -> 10000 �ɕύX���Ă݂�B
+	5人ぐらい入ると a[]get units: buffer full! を頻発。
+	BUFFERSIZE_ATTENDER を 1024 -> 10000 に変更してみる。
 	---- v.0.2.9.1
 
 100301
-	Closer�̒ǐՂ́Aatnd_index �̍������̂�D�悳����B
-	npu�̏�񑗐M�́A�ׂX���̃��P�[�V�������ɍi��B
-	svFldUnit.pos_his �͍Œ�P�͑���悤�ɂ���B
-	Goal/Dead���timeout���J�E���g�����Ȃ����߂ɁA���N�G�X�g Bye ��ǉ��B
-	�ő働�O�C���������O�ɏ������ށB
+	Closerの追跡は、atnd_index の高いものを優先させる。
+	npuの情報送信は、隣９軒のロケーション内に絞る。
+	svFldUnit.pos_his は最低１つは送るようにする。
+	Goal/Dead後のtimeoutをカウントさせないために、リクエスト Bye を追加。
+	最大ログイン数をログに書き込む。
 
 100306
-	���N�G�X�g Inquiry ��ǉ��B
-	Sword �� ���[�U�[�������҂����Ȃ��Ȃ�����A
-	Closer �� ���Ԃ��o�߂����� ���ꂼ�ꕜ���B
+	リクエスト Inquiry を追加。
+	Sword は ユーザーが所持者がいなくなったら、
+	Closer は 時間が経過したら それぞれ復活。
 
 100307
-	Closer/Sword �����̕����𒲐��B
+	Closer/Sword 復活の部分を調整。
 	
 100308
-	gene_count ���������c
+	gene_count を実装中…
 
 100310
-	���������� Closer �͓�����悤�ɂ���B
-	NPU�̔z�u���� _npu_grid��ON�ɂ���B
+	剣装備中は Closer は逃げるようにする。
+	NPUの配置時に _npu_gridをONにする。
 
 100311
-	NPU Crawl ��ǉ��B
+	NPU Crawl を追加。
 
 100313
 	---- v.0.3.9.0 protocol=0050 64/96
 	
-	Crawl ���P���Ă��Ȃ��o�O���C���B
+	Crawl が襲ってこないバグを修正。
 	---- v.0.3.9.1 protocol=0050 64/96
 
 100316
-	2�{�����Ȃ��͂��̌���3�{���Ă��܂��������𒲂ׂ邽�߂� Sword ����̃��O�o�͂������B
+	2本しかないはずの剣が3本取れてしまった原因を調べるために Sword 周りのログ出力を強化。
 	---- v.0.3.9.2 protocol=0052 64/96
 
 100324
-	gene_count �̌^ unsigned char ��O��B
+	gene_count の型 unsigned char を徹底。
 
 100327	
 	---- v.0.3.9.3 protocol=0053 64/96
 
 100409
-	#ifdef NDEBUG ���g���āA�R���p�C�������ł� Windows��łł���悤�ɂ����B
-	�������G���[�`�F�b�N�Ƃ��Ă����@�\���Ȃ��B
+	#ifdef NDEBUG を使って、コンパイルだけでも Windows上でできるようにした。
+	もちろんエラーチェックとしてしか機能しない。
 
 100410
-	�I�����Ƀ}�b�v�f�[�^��"map(sub).bin"�ɕۑ��B����N�����ɂ���Γǂݍ��ށB
-	DrawFloor �������B
+	終了時にマップデータを"map(sub).bin"に保存。次回起動時にあれば読み込む。
+	DrawFloor を実装。
 	---- v.0.4.1.0 protocol=0060 64/96
 
 100423
-	�O��̃o�[�W�����A�b�v�� Sword/Goal �����O�ɏo���ĂȂ������̂Œǉ��B
-	�v��Ȃ��R�����g�A�E�g�̍폜�B
+	前回のバージョンアップで Sword/Goal をログに出してなかったので追加。
+	要らないコメントアウトの削除。
 	
 100424
-	NPU_MapGrid�N���X�� Update() ��ǉ��B
-	�n�ʂ̓h����g���āA�G������߂邱�Ƃ��o����悤�ɂȂ����B
+	NPU_MapGridクラスに Update() を追加。
+	地面の塗りを使って、敵を閉じ込めることが出来るようになった。
 	---- v.0.4.1.1 protocol=0060 64/96
 
 100428
 	---- v.0.4.2.0 protocol=0061 64/96
 
 100506
-	NPU Closer �߂��ɂ������ǂ�������悤�ɕύX�B
-	���O�C�����ɏ����J���[��ς���B
-	svFldUnit::_Action_NNNN() �ɐ؂蕪����B
-	_DeadCount() / _ConsiderAndMove() ���쐬�B
-	svFldUnit::Disable()�ŁAposhis.Reset()�B�O��̎��S���W��NPU���������Ă����c
+	NPU Closer 近くにいる方を追いかけるように変更。
+	ログイン毎に初期カラーを変える。
+	svFldUnit::_Action_NNNN() に切り分ける。
+	_DeadCount() / _ConsiderAndMove() を作成。
+	svFldUnit::Disable()で、poshis.Reset()。前回の死亡座標にNPUが反応していた…
 	
 100508
 	---- v.0.4.2.4 protocol=0062 64/96
 
 100513
-	svFldUnit.cpp::_ConsiderAndMove() �������A
-	svFldUnit.cpp::_ConsiderDirection() �ɂȂ��ĒǐՔ\�̓A�b�v�I
+	svFldUnit.cpp::_ConsiderAndMove() を強化、
+	svFldUnit.cpp::_ConsiderDirection() になって追跡能力アップ！
 
 100515
 	---- v.0.4.3.0 protocol=0063 64/96
 
 100522
-	Beat() ��NPU�����ꂽ���� npugrid ��OFF�ɂ���B
-	�S�[���������̑��������O�ɏo�́B
+	Beat() でNPUがやられた時に npugrid をOFFにする。
+	ゴールした時の装備をログに出力。
 	---- v.0.4.3.1 protocol=0063 64/96
 
 100529
 	---- v.0.4.3.2 protocol=0064 64/96
 
-	Crawl �� Gate �̔����������݂������B
+	Crawl と Gate の反応を少し鈍くした。
 	---- v.0.4.3.3 protocol=0064 64/96
 
