@@ -5,6 +5,7 @@
 
 #include <dirent.h>   // dirent
 #include <unistd.h>   // _exit() / readlink() / unlink() / sleep() / setsid() / close() / dup2()
+#include <sys/stat.h> // mkdir()
 
 #define MAX_PATH (PATH_MAX+NAME_MAX)
 
