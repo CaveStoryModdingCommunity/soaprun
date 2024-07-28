@@ -221,7 +221,7 @@ bool svAttender::RecvRequiestAndSendResponse()
 
 	int r;
 
-	for( r = 0; r < clREQUEST_num; r++ )
+	for( r = 1; r < clREQUEST_num; r++ )
 	{
 		if( !memcmp( _buf, g_req_names[ r ], BUFFERSIZE_REQNAME ) ) break;
 	}

@@ -1,6 +1,9 @@
 CC      = gcc
+CXX     = g++
 TARGET  = SoaprunServer
-LDFLAGS = -lstdc++ -lpthread
+# CFLAGS  ?= -fsanitize=address -g
+CFLAGS  ?= -g
+LDFLAGS ?= -lpthread
 
 OBJS    =			\
 	main.o			\
@@ -20,10 +23,12 @@ OBJS    =			\
 	svFieldUnits.o	\
 	svListener.o	\
 	svPosHistory.o
-	
 
-$(TARGET):$(OBJS)
-	$(CC) -o $(TARGET) $(OBJS) $(LDFLAGS)
+%.o: %.cpp
+	$(CXX) -c -o $@ $< $(CFLAGS)
+
+$(TARGET): $(OBJS)
+	$(CXX) -o $(TARGET) $(OBJS) $(LDFLAGS) $(CFLAGS)
 
 .PHONY: run run2 clean version daemon
 	
